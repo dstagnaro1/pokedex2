@@ -34,7 +34,7 @@ class PokemonDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        loadingView.alpha = 0.8
+        loadingView.alpha = 0.7
         
         let pokeName = pokemon.name.capitalizedString
         let pokeImg = UIImage(named: "\(pokemon.pokedexId)")
