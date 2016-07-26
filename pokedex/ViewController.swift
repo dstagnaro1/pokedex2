@@ -15,6 +15,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var musicButton: UIButton!
     @IBOutlet weak var randomPokeButton: UIButton!
+    @IBOutlet weak var pokedexLabel: UILabel!
     
     var pokemon = [Pokemon]()
     var filteredPokemon = [Pokemon]()
@@ -31,9 +32,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.Done
         
+        randomizePokeButton()
+        
         initAudio()
         parsePokemonCSV()
-        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        randomizePokeButton()
     }
     
     func initAudio() {
@@ -58,7 +65,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             let rows = csv.rows
             
             for row in rows {
-//                let pokeID = Int(row["id"]!)!
                 let pokeID = row["id"]!
                 let name = row["identifier"]!
                 
@@ -136,11 +142,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     @IBAction func randomPokePressed(sender: UIButton!) {
+        randomizePokeButton()
+    }
+    
+    func randomizePokeButton() {
         let random = Int(arc4random_uniform(719))
         let randomPoke = UIImage(named: "\(random)")
         randomPokeButton.setImage(randomPoke, forState: .Normal)
     }
-    
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         view.endEditing(true)
@@ -150,7 +159,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         if searchBar.text == nil || searchBar.text == "" {
             inSearchMode = false
             view.endEditing(true)
+        } else if searchBar.text?.lowercaseString == "daniel" {
+            pokedexLabel.text = "Daniel!"
         } else {
+            pokedexLabel.text = "Pokédex"
             inSearchMode = true
             let lower = searchBar.text!.lowercaseString
             

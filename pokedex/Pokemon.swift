@@ -192,8 +192,6 @@ class Pokemon {
         let noUpperCaseName = noPokmon.stringByReplacingOccurrencesOfString(self.name.uppercaseString, withString: self.name.capitalizedString)
                                     
                                     self._description = noUpperCaseName
-                                    
-                                    // double check with gengar, arcanine, diglett
                                 }
                             }
                             completed()
