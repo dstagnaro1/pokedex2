@@ -27,54 +27,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eR-gM-pgg">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-hz-YaR">
-                                        <rect key="frame" x="532" y="7" width="68" height="68"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="68" id="0XS-A8-b5g"/>
-                                            <constraint firstAttribute="width" constant="68" id="dQH-dQ-cDG"/>
-                                        </constraints>
-                                        <state key="normal" image="294"/>
-                                        <connections>
-                                            <action selector="musicToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8C-e0-93i"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-fx-4af">
-                                        <rect key="frame" x="222" y="20" width="157" height="55"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="55" id="Ax6-le-LPd"/>
-                                            <constraint firstAttribute="width" constant="157" id="ePH-Ht-MYC"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="36"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWL-pr-zJO">
-                                        <rect key="frame" x="11" y="11" width="64" height="64"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="64" id="9sV-eL-kgy"/>
-                                            <constraint firstAttribute="height" constant="64" id="FWD-7M-Mic"/>
-                                        </constraints>
-                                        <state key="normal" image="192"/>
-                                        <connections>
-                                            <action selector="randomPokePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHQ-WS-e4G"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.41960784313725491" green="0.62745098039215685" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="K6J-fx-4af" secondAttribute="bottom" id="Etq-gb-41C"/>
-                                    <constraint firstItem="hWL-pr-zJO" firstAttribute="top" secondItem="2eR-gM-pgg" secondAttribute="top" constant="11" id="NSP-hr-GhM"/>
-                                    <constraint firstAttribute="trailing" secondItem="HKm-hz-YaR" secondAttribute="trailing" id="QzU-eh-kRS"/>
-                                    <constraint firstItem="hWL-pr-zJO" firstAttribute="leading" secondItem="2eR-gM-pgg" secondAttribute="leading" constant="11" id="SqA-af-IDG"/>
-                                    <constraint firstAttribute="height" constant="75" id="VaR-T3-ybV"/>
-                                    <constraint firstAttribute="bottom" secondItem="HKm-hz-YaR" secondAttribute="bottom" id="g7c-Hd-PTK"/>
-                                    <constraint firstItem="K6J-fx-4af" firstAttribute="centerX" secondItem="2eR-gM-pgg" secondAttribute="centerX" id="gGb-A0-CnN"/>
-                                </constraints>
-                            </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="fTC-yH-5Qh" userLabel="background">
                                 <rect key="frame" x="0.0" y="75" width="600" height="525"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="0.0" y="75" width="600" height="325"/>
+                                </variation>
                             </imageView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="BZo-he-Tqx">
                                 <rect key="frame" x="0.0" y="75" width="600" height="44"/>
@@ -134,7 +91,70 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="20" y="124" width="560" height="266"/>
+                                </variation>
                             </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2eR-gM-pgg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="75"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKm-hz-YaR">
+                                        <rect key="frame" x="532" y="7" width="68" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="68" id="0XS-A8-b5g"/>
+                                            <constraint firstAttribute="width" constant="68" id="dQH-dQ-cDG"/>
+                                        </constraints>
+                                        <state key="normal" image="294"/>
+                                        <connections>
+                                            <action selector="musicToggled:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8C-e0-93i"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokédex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6J-fx-4af">
+                                        <rect key="frame" x="222" y="20" width="157" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Ax6-le-LPd"/>
+                                            <constraint firstAttribute="width" constant="157" id="ePH-Ht-MYC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="36"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWL-pr-zJO">
+                                        <rect key="frame" x="11" y="11" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="64" id="9sV-eL-kgy"/>
+                                            <constraint firstAttribute="height" constant="64" id="FWD-7M-Mic"/>
+                                        </constraints>
+                                        <state key="normal" image="192"/>
+                                        <connections>
+                                            <action selector="randomPokePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NHQ-WS-e4G"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.41960784313725491" green="0.62745098039215685" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="K6J-fx-4af" secondAttribute="bottom" id="Etq-gb-41C"/>
+                                    <constraint firstAttribute="bottom" secondItem="hWL-pr-zJO" secondAttribute="bottom" id="JoE-UR-3df"/>
+                                    <constraint firstItem="hWL-pr-zJO" firstAttribute="top" secondItem="2eR-gM-pgg" secondAttribute="top" constant="11" id="NSP-hr-GhM"/>
+                                    <constraint firstAttribute="trailing" secondItem="HKm-hz-YaR" secondAttribute="trailing" id="QzU-eh-kRS"/>
+                                    <constraint firstItem="hWL-pr-zJO" firstAttribute="leading" secondItem="2eR-gM-pgg" secondAttribute="leading" constant="11" id="SqA-af-IDG"/>
+                                    <constraint firstAttribute="height" constant="75" id="VaR-T3-ybV"/>
+                                    <constraint firstAttribute="height" constant="60" id="c4W-vx-Quz"/>
+                                    <constraint firstAttribute="bottom" secondItem="HKm-hz-YaR" secondAttribute="bottom" id="g7c-Hd-PTK"/>
+                                    <constraint firstItem="K6J-fx-4af" firstAttribute="centerX" secondItem="2eR-gM-pgg" secondAttribute="centerX" id="gGb-A0-CnN"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="c4W-vx-Quz"/>
+                                        <exclude reference="NSP-hr-GhM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="VaR-T3-ybV"/>
+                                        <include reference="c4W-vx-Quz"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -176,11 +196,11 @@
                         <viewControllerLayoutGuide type="bottom" id="LD9-jM-S9I"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Nub-P2-xeg" userLabel="SuperView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="650"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="BNC-9i-heE" userLabel="background">
-                                <rect key="frame" x="0.0" y="70" width="600" height="630"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="580"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nRP-gc-Odf" userLabel="topView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="70"/>
@@ -220,6 +240,7 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.41960784309999999" green="0.62745098040000002" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0Ei-WI-Uhm"/>
                                     <constraint firstAttribute="bottom" secondItem="N7u-jD-8pg" secondAttribute="bottom" constant="0.5" id="Ak2-zk-W3V"/>
                                     <constraint firstItem="Ino-zs-dVT" firstAttribute="centerX" secondItem="nRP-gc-Odf" secondAttribute="centerX" id="Cak-LO-cbp"/>
                                     <constraint firstAttribute="trailing" secondItem="N7u-jD-8pg" secondAttribute="trailing" constant="10" id="Cat-4O-hbf"/>
@@ -233,12 +254,23 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="0Ei-WI-Uhm"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="0Ei-WI-Uhm"/>
+                                        <exclude reference="bJV-Ub-Pt4"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zti-VE-vkS">
-                                <rect key="frame" x="0.0" y="70" width="600" height="580"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="530"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PaS-eY-bBO">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="530"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EcE-Ob-F3C" userLabel="infoStack">
                                                 <rect key="frame" x="8" y="15" width="584" height="207"/>
@@ -436,7 +468,7 @@
                                             <constraint firstItem="EcE-Ob-F3C" firstAttribute="top" secondItem="PaS-eY-bBO" secondAttribute="top" constant="15" id="NVv-T7-mJr"/>
                                             <constraint firstItem="8RQ-Sf-Qcl" firstAttribute="top" secondItem="L2y-GM-0t7" secondAttribute="bottom" constant="25" id="Uk5-uH-pdY"/>
                                             <constraint firstItem="L2y-GM-0t7" firstAttribute="leading" secondItem="PaS-eY-bBO" secondAttribute="leading" constant="5" id="fdx-RC-o5a"/>
-                                            <constraint firstAttribute="height" constant="580" id="hi7-7g-e7u"/>
+                                            <constraint firstAttribute="height" constant="530" id="hi7-7g-e7u"/>
                                             <constraint firstAttribute="trailing" secondItem="EcE-Ob-F3C" secondAttribute="trailing" constant="8" id="mII-tV-ois"/>
                                             <constraint firstItem="8RQ-Sf-Qcl" firstAttribute="leading" secondItem="PaS-eY-bBO" secondAttribute="leading" constant="10" id="vAu-K9-Nch"/>
                                         </constraints>
@@ -450,10 +482,10 @@
                                 </constraints>
                             </scrollView>
                             <view clearsContextBeforeDrawing="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mA4-Ep-BHF">
-                                <rect key="frame" x="0.0" y="70" width="600" height="630"/>
+                                <rect key="frame" x="0.0" y="70" width="600" height="580"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jj-jY-a5E">
-                                        <rect key="frame" x="200" y="276" width="200.5" height="78"/>
+                                        <rect key="frame" x="200" y="251" width="200.5" height="78"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="Lsq-AV-gh4"/>
                                             <constraint firstAttribute="height" constant="78" id="RHq-go-lTa"/>
@@ -497,7 +529,7 @@
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="700"/>
+                    <size key="freeformSize" width="600" height="650"/>
                     <connections>
                         <outlet property="baseAttackLabel" destination="5nl-yl-vyw" id="blB-23-8xN"/>
                         <outlet property="currentEvoImage" destination="u1j-Ad-de4" id="ckO-jf-f1r"/>
