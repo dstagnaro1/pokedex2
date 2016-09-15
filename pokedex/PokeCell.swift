@@ -47,5 +47,8 @@ class PokeCell: UICollectionViewCell {
 
 
         pokeImage.image = UIImage(named: "\(pokemon.pokedexId)")
+        ////
+//        pokeImage.hidden = true ////
+        ////
     }
 }
